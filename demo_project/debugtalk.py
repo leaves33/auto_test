@@ -5,3 +5,6 @@ BASE_URL = "http://pahf.st.anhouse.com.cn"
 def get_base_url():
     return BASE_URL
 
+def get_nowtime():
+    return int(time.time())
+
