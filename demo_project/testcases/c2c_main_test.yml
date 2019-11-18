@@ -1,0 +1,12 @@
+- test:
+    name: c端用户登录
+    api: api/web_account_login.yml
+    variables:
+        loginNo: ${ENV(loginNo)}  #"18579099966"
+        password: ${ENV(password)} #"abc123"
+    extract:
+        - data: content.data
+    validate:
+        - eq: [status_code,200]
+        - len_eq: ["content.data.userCode",11]
+        - eq: [content.success, True]

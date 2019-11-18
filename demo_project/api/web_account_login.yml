@@ -1,0 +1,12 @@
+name: c端登录
+variables:
+    uri: /web/api/account/login
+request:
+    url: $uri
+    method: POST
+    json:
+        "loginNo": $loginNo
+        "password": $password
+#        "loginNo": ${ENV(loginNo)}
+#        "password": ${ENV(password)}
+

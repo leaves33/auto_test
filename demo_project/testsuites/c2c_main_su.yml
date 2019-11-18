@@ -1,0 +1,6 @@
+config:
+    name: c2c主流程
+    base_url: ${get_base_url()}
+testcases:
+    c端流程:
+        testcase: testcases/c2c_main_test.yml
